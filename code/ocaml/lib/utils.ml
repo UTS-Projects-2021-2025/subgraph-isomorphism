@@ -1,5 +1,23 @@
 open Owl
 
+let row_to_dot_vertex i j =
+  let u, v = i+1, j+1 in
+  Printf.sprintf "  \"%d\" -- \"%d\";\n" u v
+
+let adjacency_to_dot_undirected matrix =
+  let rows, cols = Mat.shape matrix in
+  let buffer = Buffer.create 1024 in
+  Buffer.add_string buffer "graph G {\n";
+  for i = 0 to rows - 1 do
+    for j = i to cols - 1 do
+      if Mat.get matrix i j <> 0. then
+        row_to_dot_vertex i j
+        |> Buffer.add_string buffer
+    done
+  done;
+  Buffer.add_string buffer "}\n";
+  Buffer.contents buffer
+
 (* Function to generate a random permutation vector *)
 let random_permutation n =
   let v = Array.init n Fun.id in
