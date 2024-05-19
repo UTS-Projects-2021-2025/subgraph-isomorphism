@@ -1,0 +1,236 @@
+\usepackage[left=2cm,right=2cm,bottom=3cm,top=2.5cm]{geometry}
+
+\let\proof\relax
+\let\endproof\relax
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{soul}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{mdframed}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{algpseudocode}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage[all,cmtip]{xy}
+\usepackage{graphicx}
+\usepackage{framed}
+
+% \pagespttyle{plain}
+
+
+\setul{1ex}{.5pt}
+
+\hypersetup{
+    % pdftitle={},
+    % pdfauthor={},
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    pdfstartview=FitH,
+    pdfpagemode=UseOutlines,
+    pdfpagelayout=OneColumn,
+}
+
+% \setcounter{tocdepth}{2}
+
+\mdfdefinestyle{figstyle}{ %
+	linecolor=black!7, %
+	backgroundcolor=black!7, %
+	innertopmargin=10pt, %
+	innerleftmargin=25pt, %
+	innerrightmargin=25pt, %
+	innerbottommargin=10pt %
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{construction}{Construction}
+
+\theoremstyle{definition}
+\newtheorem{action}{Group Action}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{observation}{Observation}
+\newtheorem{fact}{Fact}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\bra}[1]{\langle{#1}|}
+\newcommand{\ket}[1]{|{#1}\rangle}
+\newcommand{\ip}[2]{\langle{#1}, {#2}\rangle}
+\newcommand{\braket}[2]{\langle{#1}|{#2}\rangle}
+\newcommand{\mode}[1]{\textnormal{\textsf{#1}}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Matrix}{\mathrm{M}}
+\newcommand{\Tensor}{\mathrm{T}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\ATF}{\mathrm{ATF}}
+\newcommand{\rk}{\mathrm{rank}}
+\newcommand{\probsty}[1]{\textsf{#1}\xspace}
+\newcommand{\GI}{\probsty{GI}}
+\newcommand{\PK}{\mathrm{PK}}
+\newcommand{\SK}{\mathrm{SK}}
+
+\newcommand{\CFI}{\probsty{CFI}}
+\newcommand{\ID}{\probsty{ID}}
+\newcommand{\QFMI}{\probsty{QFMI}}
+\newcommand{\pGpI}{$p$\probsty{GpI}}
+\newcommand{\GMW}{\probsty{GMW}}
+\newcommand{\Alteq}{\probsty{ALTEQ}}
+\newcommand{\DATFE}{\probsty{DATFE}}
+\newcommand{\MATFE}{\probsty{MATFE}}
+\newcommand{\PATFE}{\probsty{PATFE}}
+\newcommand{\Exp}{\probsty{Exp}}
+\newcommand{\ATFA}{\probsty{ATFA}}
+\newcommand{\EUFCMA}{\probsty{EUF-CMA}}
+\newcommand{\sEUFCMA}{\probsty{sEUF-CMA}}
+\newcommand{\EUFNMA}{\probsty{EUFNMA}}
+\newcommand{\CROATFE}{\probsty{$C$-PR-psATFE-RO}}
+\newcommand{\ROATFE}{\probsty{PR-psATFE-RO}}
+\newcommand{\FS}{\probsty{FS}}
+\newcommand{\PI}{\probsty{PI}}
+\newcommand{\TIp}{\probsty{TI}}
+\newcommand{\DTI}{\probsty{DTI}}
+\newcommand{\TTI}{\probsty{3TI}}
+\newcommand{\gainv}{\probsty{GA-Inv}}
+\newcommand{\gapr}{\probsty{GA-PR}}
+\newcommand{\msg}{M}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\tA}{\mathtt{A}}
+\newcommand{\Tr}{\mathrm{Tr}}
+
+\newcommand{\sampcost}{\textsf{samp-cost}}
+\newcommand{\colcost}{\textsf{col-cost}}
+\newcommand{\invcost}{\textsf{inv-cost}}
+\newcommand{\mrkcost}{\textsf{minrank-cost}}
+
+\newcommand{\tB}{\mathtt{B}}
+
+%\newcommand{\M}{\mathrm{M}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\gpmul}{\circ}
+\newcommand{\gpact}{\ast}
+\newcommand{\class}[1]{\ensuremath{\mathrm{#1}}\xspace}
+\newcommand{\NP}{\class{NP}}
+\newcommand{\TI}{\class{TI}}
+\newcommand{\coNP}{\class{coNP}}
+%\newcommand{\coAM}{\class{coAM}} %cryptocode
+
+%\newcommand{\secpar}{\lambda} %cryptocode
+\newcommand{\usecpar}{1^\secpar}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\bit}{\{0,1\}}
+
+
+\newcommand{\FG}{\mathrm{FG}}
+
+
+\newcommand{\abbrsty}[1]{\ensuremath{\mathrm{#1}}\xspace}
+\newcommand{\OWA}{\abbrsty{OWA}}
+\newcommand{\PRA}{\abbrsty{PRA}}
+\newcommand{\PROD}{\abbrsty{PROD}}
+\newcommand{\INV}{\abbrsty{INV}}
+\newcommand{\QRO}{\abbrsty{QRO}}
+\newcommand{\GLAT}{\abbrsty{GLAT}}
+
+\newcommand{\pg}{\mathcal{G}}
+\newcommand{\cm}{\mathcal{CM}}
+\newcommand{\qdm}{\mathcal{QDM}}
+\newcommand{\params}{\texttt{params}}
+\newcommand{\attack}{\mathcal{A}}
+\newcommand{\hvsim}{\mathcal{S}}
+\newcommand{\dualkey}{{\widetilde{pk}}}
+\newcommand{\signlist}{\mathcal{L}}
+
+\newcommand{\PRF}{\mathsf{PRF}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Adj}{\mathrm{Adj}}
+\newcommand{\lencom}{{\ell_{\mathrm{in}}}}
+\newcommand{\lench}{{\ell_{\mathrm{ch}}}}
+\newcommand{\lenr}{{\ell_{\mathrm{re}}}}
+\newcommand{\prep}{\ell}
+
+\newcommand{\algstyle}[1]{\textsc{#1}\xspace}
+\newcommand{\ids}{\algstyle{ID}}
+\newcommand{\gaids}{\algstyle{GA-ID}}
+\newcommand{\kg}{\algstyle{KG}}
+\newcommand{\dkg}{\algstyle{KG}^*}
+\newcommand{\skg}{\algstyle{KeyGen}}
+%\renewcommand{\sign}{\algstyle{Sign}} %cryptocode
+\newcommand{\vrfy}{\algstyle{Verify}}
+\newcommand{\unruhsign}{\algstyle{SIGN}}
+\newcommand{\gasign}{\algstyle{GA-SIGN}}
+\newcommand{\fssign}{\algstyle{FS-SIGN}}
+\newcommand{\gafssign}{\algstyle{GA-FS-SIGN}}
+%\newcommand{\prg}{\algstyle{PRG}} %cryptocode
+\newcommand{\ggm}{\algstyle{GGM}}
+\newcommand{\tr}[1]{#1^{\mathrm{t}}}
+%\newcommand{\sEUFCMA}{\probsty{sEUF-CMA}}
+% zhili's macros
+\newcommand{\adj}{\mathrm{adj}}
+\newcommand{\MEDS}{\probsty{MEDS}}
+\newcommand{\LESS}{\probsty{LESS}}
+\newcommand{\LCME}{\probsty{LCME}}
+\newcommand{\CSIFiSh}{\probsty{CSI-FiSh}}
+\newcommand{\ComSet}{\mathsf{ComSet}}
+\newcommand{\ChaSet}{\mathsf{ChSet}}
+\newcommand{\ResSet}{\mathsf{ResSet}}
+\newcommand{\com}{\prover.\mathsf{Com}}
+\newcommand{\res}{\prover.\mathsf{Res}}
+\newcommand{\ver}{\verifier.\mathsf{Ver}}
+\newcommand{\gen}{\mathsf{Gen}}
+\newcommand{\lgen}{\mathsf{LossyGen}}
+\newcommand{\Igen}{\mathsf{IGen}}
+%\newcommand{\rsample}{\stackrel{\$}{\leftarrow}}
+\newcommand{\ChaSp}{\mathcal{C}}
+\newcommand{\rsample}{\gets_R}
+\newcommand{\sgn}{\mathsf{Sign}}
+\newcommand{\vrf}{\mathsf{Verify}}
+\newcommand{\pkey}{\mathsf{pk}}
+\newcommand{\skey}{\mathsf{sk}}
+\newcommand{\ls}{\mathsf{ls}}
+\newcommand{\Time}{\mathsf{Time}}
+\newcommand{\Advantage}{\mathsf{Adv}}
+\let\O\undefined
+\let\S\undefined
+\DeclareMathOperator{\O}{\mathrm{O}}
+\DeclareMathOperator{\S}{\mathrm{S}}
+\DeclareMathOperator{\M}{\mathrm{M}}
+\DeclareMathOperator{\GL}{\mathrm{GL}}
+\DeclareMathOperator{\SL}{\mathrm{SL}}
+
+\newcommand{\enote}[1]{\textcolor{blue}{\small$\bullet$\footnote{\textcolor{blue}{Euan:
+				#1}}}}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%\DeclareMathOperator{\tr}{\mathrm{tr}}
