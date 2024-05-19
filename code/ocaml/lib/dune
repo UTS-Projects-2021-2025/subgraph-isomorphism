@@ -1,0 +1,4 @@
+(library
+ (name SubgraphIsomorphism)
+ (public_name subgraph-isomorphism)
+ (libraries owl))
