@@ -10,6 +10,8 @@
     "art12")
    (LaTeX-add-labels
     "lem:fake"
-    "thm:fake"))
+    "thm:fake")
+   (LaTeX-add-bibliographies
+    "subgraph-isomorphism"))
  :latex)
 

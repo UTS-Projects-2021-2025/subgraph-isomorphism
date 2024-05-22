@@ -1,3 +1,4 @@
+open Base
 open Owl
 
 let row_to_dot_vertex i j =
@@ -29,12 +30,18 @@ let random_permutation n =
   done;
   v
 
-(* Function to generate a permutation matrix *)
-let random_permutation_matrix n =
-  let p = random_permutation n in
+let permutation_to_permutation_matrix p =
+  let n = Array.length p in
   let m = Mat.zeros n n in
   Array.iteri (fun i j -> Mat.set m i j 1.) p;
   m
+
+(* Function to generate a permutation matrix *)
+let random_permutation_matrix n =
+  random_permutation n
+  |> permutation_to_permutation_matrix
+
+(* Function to generate a random adjacency matrix *)
 
 (* The action permuation on adj matrix *)
 let permute_adj_matrix adj p =
