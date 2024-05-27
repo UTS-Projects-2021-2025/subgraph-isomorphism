@@ -1,4 +1,3 @@
-open Base
 open Owl
 
 let row_to_dot_vertex i j =
