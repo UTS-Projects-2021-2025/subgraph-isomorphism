@@ -1,0 +1,12 @@
+# Temp Files
+.DS_Store
+.idea
+*.log
+tmp/
+
+# Latex Specific
+*.pdf
+*.synctex.gz
+*.out
+*.aux
+*.toc
