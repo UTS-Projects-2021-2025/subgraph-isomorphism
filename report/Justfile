@@ -2,7 +2,7 @@ alias b := build
 alias w := watch
 
 compiler := "tectonic -X compile --synctex"
-src := "report.tex"
+src := "graph_homomorphism.tex"
 
 build:
     {{compiler}} {{src}}

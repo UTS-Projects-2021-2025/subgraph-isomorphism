@@ -1,14 +1,16 @@
+;; -*- lexical-binding: t; -*-
+
 (TeX-add-style-hook
  "preamble"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("geometry" "a4paper" "left=2cm" "right=2cm" "bottom=3cm" "top=2.5cm") ("cleveref" "capitalise") ("xy" "all" "cmtip")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "geometry"
@@ -35,6 +37,7 @@
     "graphicx"
     "framed")
    (TeX-add-symbols
+    '("todon" 1)
     '("enote" 1)
     '("tr" 1)
     '("algstyle" 1)
@@ -57,7 +60,6 @@
     "id"
     "ATF"
     "rk"
-    "GI"
     "PK"
     "SK"
     "CFI"
@@ -78,7 +80,6 @@
     "ROATFE"
     "FS"
     "PI"
-    "TIp"
     "DTI"
     "TTI"
     "gainv"
@@ -104,10 +105,15 @@
     "diag"
     "gpmul"
     "gpact"
+    "AM"
     "NP"
-    "TI"
-    "coNP"
     "coAM"
+    "coNP"
+    "TI"
+    "GI"
+    "TIp"
+    "GIp"
+    "GHp"
     "usecpar"
     "veps"
     "bit"
@@ -167,6 +173,10 @@
     "ls"
     "Time"
     "Advantage"
+    "pS"
+    "M"
+    "GL"
+    "SL"
     "O"
     "S")
    (LaTeX-add-environments

@@ -1,0 +1,19 @@
+* Inbox
+** TODO Write initial report draft
+DEADLINE: <2024-07-09 Tue>
+:LOGBOOK:
+CLOCK: [2024-07-09 Tue 17:33]
+:END:
+
+[[file:graph_homomorphism.tex]]
+
+*** TODO Introduction Section
+
+*** TODO Write up preliminaries and notation section.
+
+- [ ] Write about the various groups described in the report.
+- [ ] Give a brief linear algebraic background of the problem.
+
+[[file:graph_homomorphism.tex::\subsection{Preliminaries}\label{sec:preliminaries}]]
+
+** TODO Draft Final Report

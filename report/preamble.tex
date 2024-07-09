@@ -40,7 +40,9 @@
     pdfstartview=FitH,
     pdfpagemode=UseOutlines,
     pdfpagelayout=OneColumn,
-}
+  }
+
+ 
 
 % \setcounter{tocdepth}{2}
 
@@ -85,7 +87,6 @@
 \newcommand{\ATF}{\mathrm{ATF}}
 \newcommand{\rk}{\mathrm{rank}}
 \newcommand{\probsty}[1]{\textsf{#1}\xspace}
-\newcommand{\GI}{\probsty{GI}}
 \newcommand{\PK}{\mathrm{PK}}
 \newcommand{\SK}{\mathrm{SK}}
 
@@ -107,7 +108,6 @@
 \newcommand{\ROATFE}{\probsty{PR-psATFE-RO}}
 \newcommand{\FS}{\probsty{FS}}
 \newcommand{\PI}{\probsty{PI}}
-\newcommand{\TIp}{\probsty{TI}}
 \newcommand{\DTI}{\probsty{DTI}}
 \newcommand{\TTI}{\probsty{3TI}}
 \newcommand{\gainv}{\probsty{GA-Inv}}
@@ -139,12 +139,20 @@
 \newcommand{\gpmul}{\circ}
 \newcommand{\gpact}{\ast}
 \newcommand{\class}[1]{\ensuremath{\mathrm{#1}}\xspace}
+\newcommand{\AM}{\class{AM}}
 \newcommand{\NP}{\class{NP}}
-\newcommand{\TI}{\class{TI}}
-\newcommand{\coNP}{\class{coNP}}
 \newcommand{\coAM}{\class{coAM}}
+\newcommand{\coNP}{\class{coNP}}
 
-%\newcommand{\secpar}{\lambda} %cryptocode
+\newcommand{\TI}{\probsty{TI}}
+\newcommand{\GI}{\probsty{GI}}
+
+\newcommand{\TIp}{\class{TI}}
+\newcommand{\GIp}{\class{GI}}
+\newcommand{\GHp}{\class{GH}}
+
+
+% \newcommand{\secpar}{\lambda} %cryptocode
 \newcommand{\usecpar}{1^\secpar}
 \newcommand{\veps}{\varepsilon}
 \newcommand{\bit}{\{0,1\}}
@@ -225,12 +233,15 @@
 
 \DeclareMathOperator{\O}{\mathrm{O}}
 \DeclareMathOperator{\S}{\mathrm{S}}
+\DeclareMathOperator{\pS}{\overrightarrow{\mathrm{S}}}
 \DeclareMathOperator{\M}{\mathrm{M}}
 \DeclareMathOperator{\GL}{\mathrm{GL}}
 \DeclareMathOperator{\SL}{\mathrm{SL}}
 
 \newcommand{\enote}[1]{\textcolor{blue}{\small$\bullet$\footnote{\textcolor{blue}{Euan:
-				#1}}}}
+        #1}}}}
+
+\newcommand\todon[1]{\textcolor{red}{TODO:~#1}}
 
 \renewcommand\qedsymbol{$\blacksquare$}
 
