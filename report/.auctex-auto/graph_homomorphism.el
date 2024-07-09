@@ -19,6 +19,8 @@
     "art12")
    (LaTeX-add-labels
     "sec:introduction"
-    "sec:preliminaries"))
+    "sec:preliminaries"
+    "sec:problem"
+    "sec:results"))
  :latex)
 

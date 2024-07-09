@@ -2,14 +2,23 @@
 ** TODO Write initial report draft
 DEADLINE: <2024-07-09 Tue>
 :LOGBOOK:
-CLOCK: [2024-07-09 Tue 17:33]
+CLOCK: [2024-07-09 Tue 18:05]--[2024-07-09 Tue 18:30] =>  0:25
+CLOCK: [2024-07-09 Tue 17:33]--[2024-07-09 Tue 17:58] =>  0:25
 :END:
 
 [[file:graph_homomorphism.tex]]
 
-*** TODO Introduction Section
+*** TODO Introduction Section [0/6]
 
-*** TODO Write up preliminaries and notation section.
+- [ ] General introduction to the problem.
+- [ ] Introduction to the complexity of each problem.
+- [ ] Practical methods for graph isomorphism.
+- [ ] Linear algebraic approaches to graph isomorphism.
+- [ ] The subgraph isomorphism open question.
+- [ ] Possible linear algebraic techniques for graph isomorphism
+
+
+*** TODO Write up preliminaries and notation section. [0/2]
 
 - [ ] Write about the various groups described in the report.
 - [ ] Give a brief linear algebraic background of the problem.
