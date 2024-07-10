@@ -1,28 +1,60 @@
 * Inbox
-** TODO Write initial report draft
-DEADLINE: <2024-07-09 Tue>
-:LOGBOOK:
-CLOCK: [2024-07-09 Tue 18:05]--[2024-07-09 Tue 18:30] =>  0:25
-CLOCK: [2024-07-09 Tue 17:33]--[2024-07-09 Tue 17:58] =>  0:25
-:END:
+** TODO Draft Report Version 1.
+DEADLINE: <2024-07-19 Fri>
 
-[[file:graph_homomorphism.tex]]
+*** TODO Introduction [0/4]
+[[file:graph_homomorphism.tex::\section{Introduction}\label{sec:introduction}]]
 
-*** TODO Introduction Section [0/6]
+The /Introduction/ section should contain information about the computational complexity and motivation for writing a memetic algorithm. It should also give a brief introduction to the actual problem and a brief overview of the report structure.
 
-- [ ] General introduction to the problem.
-- [ ] Introduction to the complexity of each problem.
-- [ ] Practical methods for graph isomorphism.
-- [ ] Linear algebraic approaches to graph isomorphism.
-- [ ] The subgraph isomorphism open question.
-- [ ] Possible linear algebraic techniques for graph isomorphism
+ * [ ] Introduce the problem.
+ * [ ] Describe the problems complexity, why the need for a memetic algorithm?
+ * [ ] Introduce some research questions around the problem.
 
 
-*** TODO Write up preliminaries and notation section. [0/2]
-
-- [ ] Write about the various groups described in the report.
-- [ ] Give a brief linear algebraic background of the problem.
-
+***** TODO Preliminaries [0/4]
 [[file:graph_homomorphism.tex::\subsection{Preliminaries}\label{sec:preliminaries}]]
 
-** TODO Draft Final Report
+Setup the notation and introductory maths.
+
+ * [ ] Setup the standard notation.
+ * [ ] Describe the groups and group actions.
+ * [ ] Describe the graph notation.
+ * [ ] Linear algebra notation.
+
+*** TODO Literature Review/Problem and Background [0/5]
+[[file:graph_homomorphism.tex::\section{Background to Graph Homomorphism}\label{sec:background}]]
+
+We should probably give a more formal and complete definition to the problem here.
+The literature review should give a general overview of prior related research and what the current state of the art approaches are.
+
+ * [ ] Formal statement of the problem, including some linear algebraic formulation as per discussions.
+ * [ ] Background to Graph Isomorphism and Linear Algebraic Techniques. [0/2]
+   * [ ] Weisfeiler-Leman and practical graph isomorphism algorithms [cite:@WeisfeilerLeman1968] and see survey[cite:@GroheNeuen2021a].
+   * [ ] Linear Algebraic Analogues[cite:@LiQiao2017][cite:@BrooksbankEtAl2019][cite:@ChenEtAl2024].
+ * [ ] Background to the Graph Homomorphism/Subgraph Isomorphism Problem and current techniques. [0/2]
+   * [ ] Backtracking Techniques[cite:@JuttnerMadarasi2018;@CarlettiEtAl2017]
+   * [ ] Also wikipedia has some nice results listed. [[wikipedia:Subgraph_isomorphism_problem][Subgraph Isomorphism Problem Wikipedia Link]]
+ * [ ] Mention papers describing memetic approaches to the problem including [cite:@HaqueEtAl2019]
+
+** TODO The Algorithm [0/2]
+[[file:graph_homomorphism.tex::\section{The Algorithm}\label{sec:algorithm}]]
+
+Here we describe the overall methodology used to construct the algorithm.
+
+ * [ ] Introduce the linear algebraic techniques used to construct an optimisation problem.
+ * [ ] Discuss any considerations and enhancement techniques.
+
+** TODO The Results [0/3]
+[[file:graph_homomorphism.tex::\section{Results}\label{sec:results}]]
+
+Discuss and compare the results benchmarks to other implementations. What kind of graphs yield the best performance.
+
+ * [ ] Describe the optimal input landscape.
+ * [ ] Compare with the other algorithm implementations.
+ * [ ] What went bad or good and why?
+
+** TODO The Conclusion
+[[file:graph_homomorphism.tex::\section{Conclusion}\label{sec:conclusion}]]
+
+Summary of overall paper.
